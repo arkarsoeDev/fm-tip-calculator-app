@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, input {
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Mono', monospace;
+}
+
+body {
+  background-color: #c5e4e7;
+}
+
+.container .title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px;
+}
+
+.container .title-container .logo {
+  background: url("../images/logo.svg") no-repeat center;
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.container .card-container .card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+}
+
+.container .card-container .card .bill-section {
+  margin-bottom: 30px;
+}
+
+.container .card-container .card .bill-section .bill-label {
+  color: #5e7a7d;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.container .card-container .card .bill-section .bill-input-container {
+  position: relative;
+}
+
+.container .card-container .card .bill-section .bill-input-container .dollar-icon {
+  background: #f4fafa url("../images/icon-dollar.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.container .card-container .card .bill-section .bill-input-container .bill-input {
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #f4fafa;
+  padding: 10px 15px;
+  text-align: right;
+  font-size: 24px;
+  font-weight: 700;
+  color: #00494d;
+  outline: none;
+}
+
+.container .card-container .card .select-section {
+  margin-bottom: 30px;
+}
+
+.container .card-container .card .select-section .select-label {
+  color: #5e7a7d;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.container .card-container .card .select-section .tip-cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.container .card-container .card .select-section .tip-cards-container .tip-card {
+  width: 47%;
+  margin: 0 0 6% 0;
+  background-color: #00494d;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.container .card-container .card .select-section .tip-cards-container .tip-card-input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 47%;
+  margin: 0 0 6% 0;
+  background-color: #00494d;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 24px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container .card-container .card .select-section .tip-cards-container .tip-card-input-container .tip-card-input {
+  width: 100%;
+  text-align: right;
+  padding: 10px;
+  letter-spacing: 1.5px;
+  color: #00494d;
+  font-weight: 700;
+  background-color: #f4fafa;
+  border: none;
+  outline: none;
+  font-size: 24px;
+}
+
+.container .card-container .card .select-section .tip-cards-container .tip-card-input-container .tip-card-input::-webkit-input-placeholder {
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Mono', monospace;
+}
+
+.container .card-container .card .select-section .tip-cards-container .tip-card-input-container .tip-card-input:-ms-input-placeholder {
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Mono', monospace;
+}
+
+.container .card-container .card .select-section .tip-cards-container .tip-card-input-container .tip-card-input::-ms-input-placeholder {
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Mono', monospace;
+}
+
+.container .card-container .card .select-section .tip-cards-container .tip-card-input-container .tip-card-input::placeholder {
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Mono', monospace;
+}
+
+.container .card-container .card .people-count-section {
+  margin-bottom: 30px;
+}
+
+.container .card-container .card .people-count-section .people-count-label {
+  color: #5e7a7d;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.container .card-container .card .people-count-section .people-input-container {
+  position: relative;
+}
+
+.container .card-container .card .people-count-section .people-input-container .people-icon {
+  background: #f4fafa url("/images/icon-person.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.container .card-container .card .people-count-section .people-input-container .people-input {
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #f4fafa;
+  padding: 10px 15px;
+  text-align: right;
+  font-size: 24px;
+  font-weight: 700;
+  color: #00494d;
+  outline: none;
+}
+
+.container .card-container .card .calculate-section {
+  background-color: #00494d;
+  border-radius: 20px;
+  padding: 40px 20px 20px 20px;
+  color: white;
+}
+
+.container .card-container .card .calculate-section .calculate-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.container .card-container .card .calculate-section .calculate-amount .amount-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.container .card-container .card .calculate-section .calculate-amount .amount-label .amount-byperson {
+  font-size: 14px;
+  color: #7f9c9f;
+}
+
+.container .card-container .card .calculate-section .calculate-amount .amount-price {
+  font-size: 33px;
+  color: #26c0ab;
+  font-weight: 700;
+}
+
+.container .card-container .card .calculate-section .reset-button-container {
+  text-align: center;
+}
+
+.container .card-container .card .calculate-section .reset-button-container .reset-button {
+  display: block;
+  background-color: #26c0ab;
+  color: #00494d;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 22px;
+  width: 100%;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 376px) {
+  .container .card-container .card {
+    padding: 40px;
+    width: 70%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .container .card-container .card .desktop-left, .container .card-container .card .desktop-right {
+    width: 48%;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
+  .container .card-container .card .desktop-left .select-section .tip-cards-container .tip-card {
+    width: 30%;
+    padding: 10px;
+  }
+  .container .card-container .card .desktop-left .select-section .tip-cards-container .tip-card-input-container {
+    width: 30%;
+  }
+  .container .card-container .card .desktop-left .select-section .tip-cards-container .tip-card-input-container .tip-card-input {
+    padding: 10px;
+  }
+  .container .card-container .card .desktop-right .calculate-section {
+    height: 100%;
+    padding: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .card-container .card .desktop-right .calculate-section .calculate-label .calculate-amount .amount-price {
+    font-size: 50px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

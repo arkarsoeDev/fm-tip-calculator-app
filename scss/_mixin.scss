@@ -1,0 +1,61 @@
+@mixin section-mb {
+    margin-bottom: 30px;
+}
+@mixin icon-style {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+@mixin input-component {
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    background-color: $light-gray-2;
+    padding: 10px 15px;
+    text-align: right;
+    font-size: $input-font;
+    font-weight: $weight-h;
+    color: $dark;
+    outline: none;
+}
+@mixin label-style {
+    color: $dark-gray-1;
+    font-weight: $weight-h;
+    margin-bottom: 10px;
+}
+@mixin tip-card {
+    width: 47%;
+    margin: 0 0 6% 0;
+    background-color: $dark;
+    color: $c-white;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: $font-lg;
+}
+@mixin flex($al:center,$jc:center) {
+    display: flex;
+    align-items: $al;
+    justify-content: $jc;
+}
+@mixin amountUI {
+    .amount-label{
+        display: flex;
+        flex-direction: column;
+        font-size: $font-nm;
+        font-weight: $weight-h;
+        .amount-byperson{
+            font-size: $font-sm;
+            color: $dark-gray-2;
+        }
+    }
+    .amount-price{
+        font-size: $font-xl;
+        color: $primary-color;
+        font-weight: $weight-h; 
+    }
+}

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "variables";
+@import "mixin";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,input {
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    background-color: $light-gray-1;
+}
+
+
+
+.container{
+    .title-container{
+        @include flex(center,center);
+        margin: 50px;
+        .logo{
+            background: url('../images/logo.svg') no-repeat center;
+            width: 100px;
+            height: 100px;
+            display: block;
+        }
+    }
+    .card-container{
+        .card{
+            background-color: $c-white;
+            border-radius: 20px;
+            padding: 30px 20px;
+            .bill-section{
+                @include section-mb();
+                .bill-label{
+                    @include label-style();
+                }
+                .bill-input-container{
+                    position: relative;
+                    .dollar-icon{
+                        background: $light-gray-2 url('../images/icon-dollar.svg') no-repeat;
+                        @include icon-style();
+                    }
+                    .bill-input{
+                        @include input-component();
+                    }   
+                }
+            }
+            .select-section{
+                @include section-mb();
+                .select-label{
+                    @include label-style();
+                }
+                .tip-cards-container{
+                    @include flex(center,space-between);
+                    flex-wrap: wrap;
+                    width: 100%;
+                    .tip-card{
+                        @include tip-card();
+                    }
+                    .tip-card-input-container{
+                        display: flex;
+                        align-items: center;
+                        @include tip-card();
+                        padding: 0;
+                        overflow: hidden;
+                        .tip-card-input{
+                            width: 100%;
+                            text-align: right;
+                            padding: 10px;
+                            letter-spacing: 1.5px;
+                            color: $dark;
+                            font-weight: $weight-h;
+                            background-color: $light-gray-2;
+                            border: none;
+                            outline: none;
+                            font-size: $input-font;
+                            &::placeholder {
+                                font-family: 'Outfit', sans-serif;
+                                font-family: 'Space Mono', monospace;;
+                            }
+                        }
+                    }
+                }
+            }
+            .people-count-section {
+                @include section-mb();
+                .people-count-label{
+                    @include label-style();
+                }
+                .people-input-container{
+                    position: relative;
+                    .people-icon{
+                        background: $light-gray-2 url("/images/icon-person.svg") no-repeat;
+                        @include icon-style();
+                    }
+                    .people-input{
+                        @include input-component();
+                    }
+                }
+            }
+            .calculate-section{
+                background-color: $dark;
+                border-radius: 20px;
+                padding: 40px 20px 20px 20px;
+                color: $c-white;
+                .calculate-amount{
+                    @include flex(center,space-between);
+                    @include section-mb();
+                    @include amountUI();
+                }
+                .reset-button-container{
+                    text-align: center;
+                    .reset-button{
+                        display: block;
+                        background-color: $primary-color;
+                        color: $dark;
+                        font-weight: bold;
+                        border-radius: 5px;
+                        font-size: 22px;
+                        width: 100%;
+                        padding: 10px;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@import 'res1440';

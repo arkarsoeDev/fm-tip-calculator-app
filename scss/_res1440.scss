@@ -1,0 +1,50 @@
+@media only screen and (min-width: 376px){
+    .container{
+        .card-container{
+            .card{
+                padding: 40px;
+                width: 70%;
+                margin: 0 auto;
+                @include flex(center,space-between);
+
+                .desktop-left,.desktop-right{
+                    width: 48%;
+                    align-self: stretch;
+                }
+
+                .desktop-left{
+                    .select-section{
+                        .tip-cards-container{
+                            .tip-card{
+                                width: 30%;
+                                padding: 10px;
+                            }
+                            .tip-card-input-container{
+                                width: 30%;
+                                .tip-card-input{
+                                    padding: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .desktop-right {
+                    .calculate-section{
+                        height: 100%;
+                        padding: 50px;
+                        @include flex(stretch,space-between);
+                        flex-direction: column;
+                        .calculate-label{
+                            .calculate-amount{
+                                .amount-price{
+                                    font-size: 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
