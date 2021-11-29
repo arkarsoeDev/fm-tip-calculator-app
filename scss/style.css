@@ -76,7 +76,7 @@ body {
 }
 
 .container .card-container .card .bill-section .bill-input-container .bill-input {
-  border: none;
+  border: 3px solid transparent;
   border-radius: 5px;
   width: 100%;
   background-color: #f4fafa;
@@ -86,6 +86,12 @@ body {
   font-weight: 700;
   color: #00494d;
   outline: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container .card-container .card .bill-section .bill-input-container .bill-input:focus {
+  border: 3px solid #26c0ab;
 }
 
 .container .card-container .card .select-section {
@@ -114,6 +120,8 @@ body {
 }
 
 .container .card-container .card .select-section .tip-cards-container .tip-card {
+  border: 0;
+  outline: 0;
   width: 47%;
   margin: 0 0 6% 0;
   background-color: #00494d;
@@ -122,6 +130,15 @@ body {
   border-radius: 5px;
   text-align: center;
   font-size: 24px;
+  font-weight: 700;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container .card-container .card .select-section .tip-cards-container .tip-card:hover {
+  background-color: #c5e4e7;
+  color: #00494d;
+  cursor: pointer;
 }
 
 .container .card-container .card .select-section .tip-cards-container .tip-card-input-container {
@@ -131,6 +148,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 0;
+  outline: 0;
   width: 47%;
   margin: 0 0 6% 0;
   background-color: #00494d;
@@ -139,6 +158,9 @@ body {
   border-radius: 5px;
   text-align: center;
   font-size: 24px;
+  font-weight: 700;
+  -webkit-transition: .3s;
+  transition: .3s;
   padding: 0;
   overflow: hidden;
 }
@@ -146,14 +168,16 @@ body {
 .container .card-container .card .select-section .tip-cards-container .tip-card-input-container .tip-card-input {
   width: 100%;
   text-align: right;
-  padding: 10px;
+  padding: 2px 5px;
   letter-spacing: 1.5px;
   color: #00494d;
   font-weight: 700;
   background-color: #f4fafa;
-  border: none;
+  border: 3px solid transparent;
   outline: none;
   font-size: 24px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .container .card-container .card .select-section .tip-cards-container .tip-card-input-container .tip-card-input::-webkit-input-placeholder {
@@ -174,6 +198,10 @@ body {
 .container .card-container .card .select-section .tip-cards-container .tip-card-input-container .tip-card-input::placeholder {
   font-family: 'Outfit', sans-serif;
   font-family: 'Space Mono', monospace;
+}
+
+.container .card-container .card .select-section .tip-cards-container .tip-card-input-container .tip-card-input:focus {
+  border: 3px solid #26c0ab;
 }
 
 .container .card-container .card .people-count-section {
@@ -203,7 +231,7 @@ body {
 }
 
 .container .card-container .card .people-count-section .people-input-container .people-input {
-  border: none;
+  border: 3px solid transparent;
   border-radius: 5px;
   width: 100%;
   background-color: #f4fafa;
@@ -213,6 +241,12 @@ body {
   font-weight: 700;
   color: #00494d;
   outline: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container .card-container .card .people-count-section .people-input-container .people-input:focus {
+  border: 3px solid #26c0ab;
 }
 
 .container .card-container .card .calculate-section {
@@ -274,6 +308,12 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   margin-bottom: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container .card-container .card .calculate-section .reset-button-container .reset-button:hover {
+  background-color: #c5e4e7;
 }
 
 @media only screen and (min-width: 376px) {

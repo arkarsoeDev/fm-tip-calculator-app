@@ -11,7 +11,7 @@
     transform: translateY(-50%);
 }
 @mixin input-component {
-    border: none;
+    border: 3px solid transparent;
     border-radius: 5px;
     width: 100%;
     background-color: $light-gray-2;
@@ -21,6 +21,7 @@
     font-weight: $weight-h;
     color: $dark;
     outline: none;
+    transition: .3s;
 }
 @mixin label-style {
     color: $dark-gray-1;
@@ -28,6 +29,8 @@
     margin-bottom: 10px;
 }
 @mixin tip-card {
+    border: 0;
+    outline: 0;
     width: 47%;
     margin: 0 0 6% 0;
     background-color: $dark;
@@ -36,6 +39,8 @@
     border-radius: 5px;
     text-align: center;
     font-size: $font-lg;
+    font-weight: $weight-h;
+    transition: .3s;
 }
 @mixin flex($al:center,$jc:center) {
     display: flex;
