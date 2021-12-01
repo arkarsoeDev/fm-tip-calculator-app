@@ -115,12 +115,30 @@ function calculate() {
     }
 }
 
+function miniValue(value) {
+    let newValue = value;
+    if(value > 0){
+        if(value > 999){
+            if(value > 999999){
+                newValue = (value / 1000000).toFixed(2) + "m";
+            } else {
+                newValue = (value / 1000).toFixed(2) + "k";
+            }
+        } else {
+            newValue = value.toFixed(2);
+        }
+    }
+    return newValue;
+}
+
 // show result 
 function showResult(selector,value) {
     let parent = document.querySelector(selector);
+    
     if(value >  0)
     {
-        parent.querySelector('.amount-price').innerText ="$" +value.toFixed(2);
+        let newValue = miniValue(value);
+        parent.querySelector('.amount-price').innerText ="$" +newValue;
     } else if (value == 0) {
         parent.querySelector('.amount-price').innerText ="$" +value.toFixed(2);
     }
