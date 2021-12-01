@@ -416,7 +416,7 @@ body {
   }
   .container .card-container .card .desktop-right .calculate-section {
     height: 100%;
-    padding: 50px;
+    padding: 50px 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -432,7 +432,7 @@ body {
             flex-direction: column;
   }
   .container .card-container .card .desktop-right .calculate-section .calculate-label .calculate-amount .amount-price {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */

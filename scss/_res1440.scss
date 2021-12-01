@@ -33,13 +33,13 @@
                 .desktop-right {
                     .calculate-section{
                         height: 100%;
-                        padding: 50px;
+                        padding: 50px 40px;
                         @include flex(stretch,space-between);
                         flex-direction: column;
                         .calculate-label{
                             .calculate-amount{
                                 .amount-price{
-                                    font-size: 50px;
+                                    font-size: 40px;
                                 }
                             }
                         }
