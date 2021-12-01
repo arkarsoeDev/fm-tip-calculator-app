@@ -23,6 +23,18 @@ body {
   background-color: #c5e4e7;
 }
 
+.border-danger {
+  border: 3px solid #ce1b1b !important;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .container .title-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,10 +65,29 @@ body {
   margin-bottom: 30px;
 }
 
-.container .card-container .card .bill-section .bill-label {
+.container .card-container .card .bill-section .bill-label-controller {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .card-container .card .bill-section .bill-label-controller .bill-label {
   color: #5e7a7d;
   font-weight: 700;
   margin-bottom: 10px;
+}
+
+.container .card-container .card .bill-section .bill-label-controller .bill-danger-text {
+  color: #5e7a7d;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ce1b1b;
 }
 
 .container .card-container .card .bill-section .bill-input-container {
@@ -116,6 +147,7 @@ body {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  list-style: none;
   width: 100%;
 }
 
@@ -139,6 +171,14 @@ body {
   background-color: #c5e4e7;
   color: #00494d;
   cursor: pointer;
+}
+
+.container .card-container .card .select-section .tip-cards-container .tip-card.active {
+  background-color: #26c0ab;
+}
+
+.container .card-container .card .select-section .tip-cards-container .tip-card.active:hover {
+  color: white;
 }
 
 .container .card-container .card .select-section .tip-cards-container .tip-card-input-container {
@@ -208,10 +248,29 @@ body {
   margin-bottom: 30px;
 }
 
-.container .card-container .card .people-count-section .people-count-label {
+.container .card-container .card .people-count-section .people-label-controller {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .card-container .card .people-count-section .people-label-controller .people-count-label {
   color: #5e7a7d;
   font-weight: 700;
   margin-bottom: 10px;
+}
+
+.container .card-container .card .people-count-section .people-label-controller .people-danger-text {
+  color: #5e7a7d;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ce1b1b;
 }
 
 .container .card-container .card .people-count-section .people-input-container {
@@ -302,12 +361,13 @@ body {
   color: #00494d;
   font-weight: bold;
   border-radius: 5px;
-  font-size: 22px;
+  font-size: 24px;
   width: 100%;
   padding: 10px;
   text-decoration: none;
   text-transform: uppercase;
   margin-bottom: 0;
+  cursor: pointer;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -345,7 +405,7 @@ body {
     width: 30%;
   }
   .container .card-container .card .desktop-left .select-section .tip-cards-container .tip-card-input-container .tip-card-input {
-    padding: 10px;
+    padding: 7px;
   }
   .container .card-container .card .desktop-right .calculate-section {
     height: 100%;

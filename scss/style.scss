@@ -25,7 +25,18 @@ body {
     background-color: $light-gray-1;
 }
 
+.border-danger{
+    border: 3px solid $danger !important;
+}
 
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 .container{
     .title-container{
@@ -45,8 +56,15 @@ body {
             padding: 30px 20px;
             .bill-section{
                 @include section-mb();
-                .bill-label{
-                    @include label-style();
+                .bill-label-controller {
+                    @include flex(center,space-between);
+                    .bill-label{
+                        @include label-style();
+                    }
+                    .bill-danger-text{
+                        @include label-style();
+                        color: $danger;
+                    }
                 }
                 .bill-input-container{
                     position: relative;
@@ -70,6 +88,7 @@ body {
                 .tip-cards-container{
                     @include flex(center,space-between);
                     flex-wrap: wrap;
+                    list-style: none;
                     width: 100%;
                     .tip-card{
                         @include tip-card();
@@ -77,6 +96,12 @@ body {
                             background-color: $light-gray-1;
                             color: $dark;
                             cursor: pointer;
+                        }
+                    }
+                    .tip-card.active {
+                        background-color: $primary-color;
+                        &:hover {
+                            color: $c-white;
                         }
                     }
                     .tip-card-input-container{
@@ -110,8 +135,15 @@ body {
             }
             .people-count-section {
                 @include section-mb();
-                .people-count-label{
-                    @include label-style();
+                .people-label-controller{
+                    @include flex(center,space-between);
+                    .people-count-label{
+                        @include label-style();
+                    }
+                    .people-danger-text{
+                        @include label-style();
+                        color: $danger;
+                    }
                 }
                 .people-input-container{
                     position: relative;
@@ -145,12 +177,13 @@ body {
                         color: $dark;
                         font-weight: bold;
                         border-radius: 5px;
-                        font-size: 22px;
+                        font-size: 24px;
                         width: 100%;
                         padding: 10px;
                         text-decoration: none;
                         text-transform: uppercase;
                         margin-bottom: 0;
+                        cursor: pointer;
                         transition: .3s;
                         &:hover{
                             background-color: $light-gray-1;
