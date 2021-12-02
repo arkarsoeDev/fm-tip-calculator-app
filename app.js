@@ -16,6 +16,11 @@ let peopleCount = document.querySelector('#people');
 // capture reset button
 let reset = document.querySelector('#reset');
 
+// slice input
+catchBill.addEventListener('input',limitInput);
+peopleCount.addEventListener('input',limitInput);
+tipInput.addEventListener('input',limitInput);
+
 // add event on tip card click
 tipCard.forEach(function(el){
     el.addEventListener("click", () => {
@@ -115,6 +120,7 @@ function calculate() {
     }
 }
 
+// miniValue
 function miniValue(value) {
     let newValue = value;
     if(value > 0){
@@ -129,6 +135,11 @@ function miniValue(value) {
         }
     }
     return newValue;
+}
+
+// limit input
+function limitInput(){
+    this.value = this.value.slice(0,this.max);
 }
 
 // show result 
