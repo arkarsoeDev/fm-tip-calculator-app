@@ -126,7 +126,11 @@ function miniValue(value) {
     if(value > 0){
         if(value > 999){
             if(value > 999999){
-                newValue = (value / 1000000).toFixed(2) + "m";
+                if(value > 999999999){
+                    newValue = (value / 1000000000).toFixed(2) + "b";
+                } else {
+                    newValue = (value / 1000000).toFixed(2) + "m";
+                }
             } else {
                 newValue = (value / 1000).toFixed(2) + "k";
             }
