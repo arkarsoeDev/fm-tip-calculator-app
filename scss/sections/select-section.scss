@@ -1,0 +1,74 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.select-section{
+    @include section-mb();
+    .select-label{
+        @include label-style();
+    }
+    .tip-cards-container{
+        @include flex(center,space-between);
+        flex-wrap: wrap;
+        list-style: none;
+        width: 100%;
+        .tip-card{
+            @include tip-card();
+            &:hover {
+                background-color: $light-gray-1;
+                color: $dark;
+                cursor: pointer;
+            }
+        }
+        .tip-card.active {
+            background-color: $primary-color;
+            &:hover {
+                color: $c-white;
+            }
+        }
+        .tip-card-input-container{
+            display: flex;
+            align-items: center;
+            @include tip-card();
+            padding: 0;
+            overflow: hidden;
+            .tip-card-input{
+                width: 100%;
+                text-align: right;
+                padding: 2px 5px;
+                letter-spacing: 1.5px;
+                color: $dark;
+                font-weight: $weight-h;
+                background-color: $light-gray-2;
+                border: 3px solid transparent;
+                outline: none;
+                font-size: $input-font;
+                transition: .3s;
+                &::placeholder {
+                    font-family: 'Outfit', sans-serif;
+                    font-family: 'Space Mono', monospace;;
+                }
+                &:focus {
+                    border: 3px solid $primary-color;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 426px){
+    .select-section{
+        .tip-cards-container{
+            .tip-card{
+                width: 30%;
+                padding: 10px;
+            }
+            .tip-card-input-container{
+                width: 30%;
+                .tip-card-input{
+                    padding: 7px;
+                }
+            }
+        }
+    }
+}
+

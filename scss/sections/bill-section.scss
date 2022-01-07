@@ -1,0 +1,29 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.bill-section{
+    @include section-mb();
+    .bill-label-controller {
+        @include flex(center,space-between);
+        .bill-label{
+            @include label-style();
+        }
+        .bill-danger-text{
+            @include label-style();
+            color: $danger;
+        }
+    }
+    .bill-input-container{
+        position: relative;
+        .dollar-icon{
+            background: $light-gray-2 url('/fm-tip-calculator-app/images/icon-dollar.svg') no-repeat;
+            @include icon-style();
+        }
+        .bill-input{
+            @include input-component();
+            &:focus {
+                border: 3px solid $primary-color;
+            }
+        }   
+    }
+}

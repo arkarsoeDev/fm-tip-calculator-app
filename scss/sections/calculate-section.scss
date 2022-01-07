@@ -1,0 +1,51 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.calculate-section{
+    background-color: $dark;
+    border-radius: 20px;
+    padding: 40px 20px 20px 20px;
+    color: $c-white;
+    .calculate-amount{
+        @include flex(center,space-between);
+        @include section-mb();
+        @include amountUI();
+    }
+    .reset-button-container{
+        text-align: center;
+        .reset-button{
+            display: block;
+            background-color: $primary-color;
+            color: $dark;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 24px;
+            width: 100%;
+            padding: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            cursor: pointer;
+            transition: .3s;
+            &:hover{
+                background-color: $light-gray-1;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 426px){
+    .calculate-section{
+        height: 100%;
+        padding: 50px 40px;
+        @include flex(stretch,space-between);
+        flex-direction: column;
+        .calculate-label{
+            .calculate-amount{
+                .amount-price{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, input {
+  font-family: "Outfit", sans-serif;
+  font-family: "Space Mono", monospace;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body {
+  background-color: #c5e4e7;
+}
+
+.border-danger {
+  border: 3px solid #ce1b1b !important;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container {
+  padding: 50px 0;
+}
+
+@media only screen and (min-width: 426px) {
+  .container {
+    padding: 150px 0;
+  }
+}
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 50px 0;
+}
+.title-container .logo {
+  background: url("/fm-tip-calculator-app/images/logo.svg") no-repeat center;
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+}
+
+@media only screen and (min-width: 426px) {
+  .card {
+    padding: 40px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card .desktop-left, .card .desktop-right {
+    width: 48%;
+    align-self: stretch;
+  }
+}
+.bill-section {
+  margin-bottom: 30px;
+}
+.bill-section .bill-label-controller {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bill-section .bill-label-controller .bill-label {
+  color: #5e7a7d;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.bill-section .bill-label-controller .bill-danger-text {
+  color: #5e7a7d;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ce1b1b;
+}
+.bill-section .bill-input-container {
+  position: relative;
+}
+.bill-section .bill-input-container .dollar-icon {
+  background: #f4fafa url("/fm-tip-calculator-app/images/icon-dollar.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+.bill-section .bill-input-container .bill-input {
+  border: 3px solid transparent;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #f4fafa;
+  padding: 10px 15px;
+  text-align: right;
+  font-size: 24px;
+  font-weight: 700;
+  color: #00494d;
+  outline: none;
+  transition: 0.3s;
+}
+.bill-section .bill-input-container .bill-input:focus {
+  border: 3px solid #26c0ab;
+}
+
+.people-count-section {
+  margin-bottom: 30px;
+}
+.people-count-section .people-label-controller {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.people-count-section .people-label-controller .people-count-label {
+  color: #5e7a7d;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.people-count-section .people-label-controller .people-danger-text {
+  color: #5e7a7d;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ce1b1b;
+}
+.people-count-section .people-input-container {
+  position: relative;
+}
+.people-count-section .people-input-container .people-icon {
+  background: #f4fafa url("/fm-tip-calculator-app/images/icon-person.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+.people-count-section .people-input-container .people-input {
+  border: 3px solid transparent;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #f4fafa;
+  padding: 10px 15px;
+  text-align: right;
+  font-size: 24px;
+  font-weight: 700;
+  color: #00494d;
+  outline: none;
+  transition: 0.3s;
+}
+.people-count-section .people-input-container .people-input:focus {
+  border: 3px solid #26c0ab;
+}
+
+.calculate-section {
+  background-color: #00494d;
+  border-radius: 20px;
+  padding: 40px 20px 20px 20px;
+  color: white;
+}
+.calculate-section .calculate-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.calculate-section .calculate-amount .amount-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 700;
+}
+.calculate-section .calculate-amount .amount-label .amount-byperson {
+  font-size: 14px;
+  color: #7f9c9f;
+}
+.calculate-section .calculate-amount .amount-price {
+  font-size: 33px;
+  color: #26c0ab;
+  font-weight: 700;
+}
+.calculate-section .reset-button-container {
+  text-align: center;
+}
+.calculate-section .reset-button-container .reset-button {
+  display: block;
+  background-color: #26c0ab;
+  color: #00494d;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 24px;
+  width: 100%;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.calculate-section .reset-button-container .reset-button:hover {
+  background-color: #c5e4e7;
+}
+
+@media only screen and (min-width: 426px) {
+  .calculate-section {
+    height: 100%;
+    padding: 50px 40px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .calculate-section .calculate-label .calculate-amount .amount-price {
+    font-size: 40px;
+  }
+}
+.select-section {
+  margin-bottom: 30px;
+}
+.select-section .select-label {
+  color: #5e7a7d;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.select-section .tip-cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 100%;
+}
+.select-section .tip-cards-container .tip-card {
+  border: 0;
+  outline: 0;
+  width: 47%;
+  margin: 0 0 6% 0;
+  background-color: #00494d;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.select-section .tip-cards-container .tip-card:hover {
+  background-color: #c5e4e7;
+  color: #00494d;
+  cursor: pointer;
+}
+.select-section .tip-cards-container .tip-card.active {
+  background-color: #26c0ab;
+}
+.select-section .tip-cards-container .tip-card.active:hover {
+  color: white;
+}
+.select-section .tip-cards-container .tip-card-input-container {
+  display: flex;
+  align-items: center;
+  border: 0;
+  outline: 0;
+  width: 47%;
+  margin: 0 0 6% 0;
+  background-color: #00494d;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  transition: 0.3s;
+  padding: 0;
+  overflow: hidden;
+}
+.select-section .tip-cards-container .tip-card-input-container .tip-card-input {
+  width: 100%;
+  text-align: right;
+  padding: 2px 5px;
+  letter-spacing: 1.5px;
+  color: #00494d;
+  font-weight: 700;
+  background-color: #f4fafa;
+  border: 3px solid transparent;
+  outline: none;
+  font-size: 24px;
+  transition: 0.3s;
+}
+.select-section .tip-cards-container .tip-card-input-container .tip-card-input::placeholder {
+  font-family: "Outfit", sans-serif;
+  font-family: "Space Mono", monospace;
+}
+.select-section .tip-cards-container .tip-card-input-container .tip-card-input:focus {
+  border: 3px solid #26c0ab;
+}
+
+@media only screen and (min-width: 426px) {
+  .select-section .tip-cards-container .tip-card {
+    width: 30%;
+    padding: 10px;
+  }
+  .select-section .tip-cards-container .tip-card-input-container {
+    width: 30%;
+  }
+  .select-section .tip-cards-container .tip-card-input-container .tip-card-input {
+    padding: 7px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

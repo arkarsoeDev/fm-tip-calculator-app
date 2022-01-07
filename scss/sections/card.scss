@@ -1,0 +1,25 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.card{
+    background-color: $c-white;
+    border-radius: 20px;
+    padding: 30px 20px;
+}
+
+@media only screen and (min-width: 426px){
+
+    .card{
+        padding: 40px;
+        width: 70%;
+        margin: 0 auto;
+        @include flex(center,space-between);
+
+        .desktop-left,.desktop-right{
+            width: 48%;
+            align-self: stretch;
+        }
+
+
+    }
+}

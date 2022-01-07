@@ -1,0 +1,23 @@
+{
+  "name": "tip-calculator-app-main",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+  "main": "app.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss:dist/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arkarsoeDev/fm-tip-calculator-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arkarsoeDev/fm-tip-calculator-app/issues"
+  },
+  "homepage": "https://github.com/arkarsoeDev/fm-tip-calculator-app#readme",
+  "dependencies": {
+    "sass": "^1.46.0"
+  }
+}

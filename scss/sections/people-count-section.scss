@@ -1,0 +1,29 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.people-count-section {
+    @include section-mb();
+    .people-label-controller{
+        @include flex(center,space-between);
+        .people-count-label{
+            @include label-style();
+        }
+        .people-danger-text{
+            @include label-style();
+            color: $danger;
+        }
+    }
+    .people-input-container{
+        position: relative;
+        .people-icon{
+            background: $light-gray-2 url("/fm-tip-calculator-app/images/icon-person.svg") no-repeat;
+            @include icon-style();
+        }
+        .people-input{
+            @include input-component();
+            &:focus {
+                border: 3px solid $primary-color;
+            }
+        }
+    }
+}
