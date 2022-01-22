@@ -1,96 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link rel="stylesheet" href="dist/css/style.css">
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  <div class="container">
-    <div class="title-container">
-        <i class="logo"></i>
-    </div>
-    <div class="card-container">
-      <div class="card">
-        <div class="desktop-left">
-          <div class="bill-section">
-            <div class="bill-label-controller">
-              <p for="bill" class="bill-label">Bill</p>
-              <p class="bill-danger-text"></p>
-            </div>
-            <div class="bill-input-container">
-              <i class="dollar-icon"></i>
-              <input type="number" class="bill-input" id="bill" max="10">
-            </div>
-          </div>
-          <div class="select-section">
-            <p for="tips" class="select-label">Select Tip %</p>
-            <ul class="tip-cards-container">
-              <li class="tip-card unselectable" value="5">5%
-              </li>
-              <li class="tip-card unselectable" value="10">10%
-              </li>
-              <li class="tip-card unselectable" value="15">15%
-              </li>
-              <li class="tip-card unselectable" value="25">25%
-              </li>
-              <li class="tip-card unselectable" value="50">50%
-              </li>
-              <div class="tip-card-input-container">
-                <input id="tipInput" type="number" class="tip-card-input" placeholder="Custom" max="3">
-              </div>
-            </ul>
-          </div>
-          <div class="people-count-section">
-            <div class="people-label-controller">
-              <p for="people" class="people-count-label">Number of People</p>
-              <p class="people-danger-text"></p>
-            </div>
-            <div class="people-input-container">
-              <i class="people-icon"></i>
-              <input type="number" class="people-input" id="people" max="3">
-            </div>
-          </div>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="title-container">
+          <i class="logo"></i>
         </div>
-        <div class="desktop-right">
-          <div class="calculate-section">
-            <div class="calculate-label">
-              <div class="tip-amount calculate-amount">
-                <p class="amount-label">Tip Amount
-                  <span class="amount-byperson">/ person</span></p>
-                <p class="amount-price"></p>
+        <div class="card-container">
+          <div class="card">
+            <div class="desktop-left">
+              <div class="bill-section">
+                <div class="bill-label-controller">
+                  <label for="bill" class="bill-label">Bill</label>
+                  <p class="bill-danger-text"></p>
+                </div>
+                <div class="bill-input-container">
+                  <i class="dollar-icon"></i>
+                  <input type="number" class="bill-input" id="bill" max="10" />
+                </div>
               </div>
-              <div class="total-amount calculate-amount">
-                <p class="amount-label">Total
-                  <span class="amount-byperson">/ person</span></p>
-                <p class="amount-price"></p>
+              <div class="select-section">
+                <label for="tipInput" class="select-label">Select Tip %</label>
+                <div class="tip-cards-container">
+                  <div class="tip-card unselectable" >5%</div>
+                  <div class="tip-card unselectable" >10%</div>
+                  <div class="tip-card unselectable" >15%</div>
+                  <div class="tip-card unselectable" >25%</div>
+                  <div class="tip-card unselectable" >50%</div>
+                  <div class="tip-card-input-container">
+                    <input
+                      id="tipInput"
+                      type="number"
+                      class="tip-card-input"
+                      placeholder="Custom"
+                      max="3"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="people-count-section">
+                <div class="people-label-controller">
+                  <label for="people" class="people-count-label"
+                    >Number of People</label
+                  >
+                  <p class="people-danger-text"></p>
+                </div>
+                <div class="people-input-container">
+                  <i class="people-icon"></i>
+                  <input
+                    type="number"
+                    class="people-input"
+                    id="people"
+                    max="3"
+                  />
+                </div>
               </div>
             </div>
-            <div class="reset-button-container">
-              <a class="reset-button unselectable" id="reset">Reset</a>
+            <div class="desktop-right">
+              <div class="calculate-section">
+                <div class="calculate-label">
+                  <div class="tip-amount calculate-amount">
+                    <h1 class="amount-label">
+                      Tip Amount <span class="amount-byperson">/ person</span>
+                    </h1>
+                    <p class="amount-price"></p>
+                  </div>
+                  <div class="total-amount calculate-amount">
+                    <h1 class="amount-label">
+                      Total <span class="amount-byperson">/ person</span>
+                    </h1>
+                    <p class="amount-price"></p>
+                  </div>
+                </div>
+                <div class="reset-button-container">
+                  <a class="reset-button unselectable" id="reset">Reset</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Arkar Soe</a>.
-  </div>
-  
-  <script src="app.js"></script>
-</body>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Arkar Soe</a>.
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
 </html>

@@ -4,7 +4,7 @@
   "description": "This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
   "main": "app.js",
   "scripts": {
-    "compile:sass": "sass --watch scss:dist/css"
+    "compile:sass": "sass --watch scss/style.scss:dist/css/style.css"
   },
   "repository": {
     "type": "git",

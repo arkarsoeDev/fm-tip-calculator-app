@@ -29,7 +29,8 @@ tipCard.forEach(function(el){
         {
             removeActive();
         }
-        let value = el.value;
+        let postion = el.innerHTML.indexOf('%');
+        let value = el.innerHTML.slice(0,postion);
         tip = parseFloat(value);
         let result = toggleActive(el);
         if(!result) {

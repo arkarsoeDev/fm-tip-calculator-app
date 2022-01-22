@@ -3,6 +3,10 @@
 
 .select-section{
     @include section-mb();
+
+    label {
+        display: inline-block;
+    }
     .select-label{
         @include label-style();
     }
